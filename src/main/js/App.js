@@ -9,13 +9,13 @@ import NewStory from "./pages/new_story/new_story";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <>
         <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route exact path="/account" element={<Login />}></Route>
           <Route exact path="/new-story" element={<NewStory />}></Route>
         </Routes>
-      </div>
+      </>
     </Router>
   );
 }

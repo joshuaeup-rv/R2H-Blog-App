@@ -1,0 +1,18 @@
+@import "./scss/_navigation";
+@import "./scss/_post";
+@import "./scss/_newWriter";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Home */
+
+#home {
+    position: relative;
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 1.5fr 1fr;
+}
