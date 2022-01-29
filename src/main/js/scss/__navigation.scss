@@ -9,6 +9,11 @@
     align-items: center;
 
     .navigation__column {
+        a {
+            text-decoration: none;
+
+            color: black;
+        }
         #navigation__column__title {
             margin: 0;
             text-transform: bold;

@@ -1,18 +1,24 @@
+import { Link } from "react-router-dom";
+
 const Navigation = (props) => {
     return (
         <>
             <div id="navigation">
                 <div className="navigation__column">
-                    <h1 id="navigation__column__title">
-                        <i
-                            id="navigation__column__icon"
-                            className="fas fa-feather-alt"
-                        />
-                        {props.title}
-                    </h1>
+                    <Link to="/">
+                        <h1 id="navigation__column__title">
+                            <i
+                                id="navigation__column__icon"
+                                className="fas fa-feather-alt"
+                            />
+                            {props.title}
+                        </h1>
+                    </Link>
                 </div>
                 <div className="navigation__column">
-                    <button id="navigation__column__button">Post</button>
+                    <Link to="/new-story">
+                        <button id="navigation__column__button">Post</button>
+                    </Link>
                     <div id="navigation__column__profile__image__container">
                         <img
                             id="navigation__column__profile__image"

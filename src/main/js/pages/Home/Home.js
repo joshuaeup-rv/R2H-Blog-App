@@ -29,11 +29,11 @@ const titles = [
 const Home = () => {
     return (
         <>
-            <Navigation title="Medium" />
+            <Navigation title="Medium " />
             <div id="home">
                 <div>
                     {titles.map((title, index) => {
-                        return <Post title={title} />;
+                        return <Post key={index} title={title} />;
                     })}
                 </div>
 

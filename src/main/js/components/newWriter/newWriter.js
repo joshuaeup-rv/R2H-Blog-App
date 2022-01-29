@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NewWriter = () => {
     return (
         <>
@@ -46,7 +48,9 @@ const NewWriter = () => {
                             homepage and the Daily Digest, and are unique to
                             each reader.
                         </p>
-                        <button>Start writing</button>
+                        <Link to="/new-story">
+                            <button>Start writing</button>
+                        </Link>
                     </div>
                 </div>
             </div>
