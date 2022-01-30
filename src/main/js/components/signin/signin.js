@@ -1,0 +1,35 @@
+const Signin = (props) => {
+    return (
+        <div>
+            <h1>Welcome back.</h1>
+            <form>
+                <div className="signin__container">
+                    <label>Email</label>
+                    <input type="text" />
+                </div>
+                <div className="signin__container">
+                    <label>Password</label>
+                    <input type="text" />
+                </div>
+                <div className="signin__container">
+                    <button>
+                        Sign in{" "}
+                        <span>
+                            <i className="fas fa-arrow-right"></i>
+                        </span>
+                    </button>
+                </div>
+                <div id="signup__container">
+                    <p>
+                        Don't have an account yet?{" "}
+                        <a id="signup__container__link" onClick={props.update}>
+                            Create one
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default Signin;

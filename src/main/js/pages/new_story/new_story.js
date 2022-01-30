@@ -15,9 +15,13 @@ const NewStory = () => {
     };
     console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())));
 
+    const submitPost = () => {
+        console.log("Submitted");
+    };
+
     return (
         <>
-            <Navigation title="Draft in Progress" />
+            <Navigation title="Draft" submit={submitPost} />
             <div id="new__story">
                 <input id="new__story__input__title" placeholder="Title" />
                 <Editor

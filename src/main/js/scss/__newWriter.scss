@@ -27,6 +27,8 @@
             margin-top: 0;
         }
 
+        $form-border: 10px;
+
         button {
             margin-top: 2rem;
             height: 2rem;
@@ -43,5 +45,17 @@
                 transition: 0.5s ease;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    #new__writer__container {
+        padding-right: 15rem;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #new__writer__container {
+        display: none;
     }
 }

@@ -17,6 +17,24 @@ body {
     grid-template-columns: 1.5fr 1fr;
 }
 
+@media only screen and (max-width: 1250px) {
+    #home {
+        grid-template-columns: 1fr;
+
+        #post {
+            padding: 0 10rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #home {
+        #post {
+            padding: 0 5rem;
+        }
+    }
+}
+
 #new__story {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,7 +54,7 @@ body {
 
     .new__story__input__text {
         font-size: 1.5rem;
-        min-height: 60vh;
+        min-height: 50vh;
     }
 
     #new__story__input__title::placeholder,
@@ -51,5 +69,152 @@ body {
     .new__story__input__text:visited,
     .new__story__input__text:hover {
         outline: none;
+    }
+
+    $form-border: 10px;
+
+    button {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        width: 10%;
+        background-color: #507fff;
+        color: white;
+        padding: 0.8rem 1rem;
+        font-size: 1.3rem;
+        font-weight: 200;
+        border-radius: $form-border;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #5b85f8;
+        }
+        span {
+            position: absolute;
+            right: 1rem;
+        }
+    }
+}
+
+#account {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    > div {
+        display: grid;
+        // justify-content: center;
+        padding: 0 3rem;
+        align-items: center;
+        height: 70vh;
+        width: 35vw;
+        grid-gap: 3rem;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        h1 {
+            font-weight: 400;
+            align-self: flex-end;
+            text-align: center;
+        }
+
+        $form-border: 10px;
+
+        form {
+            display: grid;
+            align-self: flex-start;
+            grid-template-columns: 1fr;
+            grid-gap: 2rem;
+
+            .signin__container {
+                display: grid;
+                grid-template-columns: 1fr;
+                background-color: #f4f8fb;
+                border-top-left-radius: $form-border;
+                border-top-right-radius: $form-border;
+
+                label {
+                    padding-left: 0.5rem;
+                    padding-top: 0.5rem;
+                    color: #acadaf;
+                }
+
+                input {
+                    height: 2rem;
+                    background-color: transparent;
+                    border-left: none;
+                    border-top: none;
+                    border-right: none;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                button {
+                    position: relative;
+                    background-color: #507fff;
+                    color: white;
+                    padding: 0.8rem 1rem;
+                    font-size: 1.3rem;
+                    font-weight: 200;
+                    border-radius: $form-border;
+                    border: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #5b85f8;
+                    }
+                    span {
+                        position: absolute;
+                        right: 1rem;
+                    }
+                }
+            }
+
+            #signup__container {
+                p {
+                    text-align: center;
+
+                    a {
+                        color: #507fff;
+                        font-weight: 700;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #account {
+        > div {
+            width: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #new__story {
+        padding: 0 10%;
+        #new__story__input__title,
+        .new__story__input__text {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #new__story {
+        .rdw-editor-wrapper .rdw-editor-toolbar {
+            display: none;
+        }
+
+        .new__story__input__text {
+            min-height: 60vh;
+        }
     }
 }

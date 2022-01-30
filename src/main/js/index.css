@@ -1,7 +1,7 @@
 #navigation {
   background-color: #ffffff;
   height: 7vh;
-  line-height: 5vh;
+  line-height: 4vh;
   padding: 0 20rem 0 20rem;
   display: -ms-grid;
   display: grid;
@@ -30,11 +30,11 @@
 }
 
 #navigation .navigation__column:nth-child(2) {
-  width: 8rem;
+  width: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -43,25 +43,43 @@
           justify-content: end;
   -ms-grid-column-align: end;
       justify-self: end;
-  grid-gap: 1rem;
+  grid-gap: 0.5em;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
 }
 
-#navigation #navigation__column__profile__image__container {
-  height: auto;
-  width: 3rem;
+#navigation #navigation__column__profile__container {
+  height: 2.5rem;
+  width: 2.5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-column-align: end;
       justify-self: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#navigation #navigation__column__profile__image__container #navigation__column__profile__image {
+#navigation #navigation__column__profile__container #navigation__column__profile {
   height: 100%;
   width: 100%;
 }
 
-#navigation #navigation__column__profile__image__container #navigation__column__profile__image:hover {
+#navigation #navigation__column__profile__container #navigation__column__profile:hover {
   cursor: pointer;
+}
+
+#navigation #navigation__column__profile__container #navigation__column__profile__letter {
+  background-color: #00aec2;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 50%/50%;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
 }
 
 #navigation #navigation__column__button {
@@ -83,6 +101,21 @@
   border: none;
   background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), color-stop(#f7f7f7), color-stop(#f8f8f8), color-stop(#f9f9f9), color-stop(#fafafa), color-stop(#fbfbfb), color-stop(#fcfcfc), color-stop(#fdfdfd), to(#fefefe));
   background: linear-gradient(to bottom, #f6f6f6, #f7f7f7, #f8f8f8, #f9f9f9, #fafafa, #fbfbfb, #fcfcfc, #fdfdfd, #fefefe);
+}
+
+@media only screen and (max-width: 1300px) {
+  #navigation {
+    padding: 0 5rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #navigation {
+    padding: 0 2rem;
+  }
+  #navigation .navigation__column #navigation__column__title span {
+    display: none;
+  }
 }
 
 #post {
@@ -179,6 +212,35 @@
       grid-template-rows: 2rem;
 }
 
+@media only screen and (max-width: 1600px) {
+  #post {
+    padding-left: 15rem;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #post {
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  #post .post__column:nth-child(2) {
+    width: auto;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #post {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #post .post__column:nth-child(2) {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
 #new__writer__container {
   position: -webkit-sticky;
   position: sticky;
@@ -233,6 +295,18 @@
   transition: 0.5s ease;
 }
 
+@media only screen and (max-width: 1600px) {
+  #new__writer__container {
+    padding-right: 15rem;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  #new__writer__container {
+    display: none;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -247,6 +321,22 @@ body {
   grid-gap: 5rem;
   -ms-grid-columns: 1.5fr 1fr;
       grid-template-columns: 1.5fr 1fr;
+}
+
+@media only screen and (max-width: 1250px) {
+  #home {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  #home #post {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #home #post {
+    padding: 0 5rem;
+  }
 }
 
 #new__story {
@@ -274,7 +364,7 @@ body {
 
 #new__story .new__story__input__text {
   font-size: 1.5rem;
-  min-height: 60vh;
+  min-height: 50vh;
 }
 
 #new__story #new__story__input__title::-webkit-input-placeholder,
@@ -304,5 +394,156 @@ body {
 #new__story .new__story__input__text:visited,
 #new__story .new__story__input__text:hover {
   outline: none;
+}
+
+#new__story button {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 10%;
+  background-color: #507fff;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 200;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#new__story button:hover {
+  background-color: #5b85f8;
+}
+
+#new__story button span {
+  position: absolute;
+  right: 1rem;
+}
+
+#account {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#account > div {
+  display: -ms-grid;
+  display: grid;
+  padding: 0 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  width: 35vw;
+  grid-gap: 3rem;
+  -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#account > div h1 {
+  font-weight: 400;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+}
+
+#account > div form {
+  display: -ms-grid;
+  display: grid;
+  align-self: flex-start;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+#account > div form .signin__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  background-color: #f4f8fb;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#account > div form .signin__container label {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+  color: #acadaf;
+}
+
+#account > div form .signin__container input {
+  height: 2rem;
+  background-color: transparent;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+#account > div form .signin__container input:focus {
+  outline: none;
+}
+
+#account > div form .signin__container button {
+  position: relative;
+  background-color: #507fff;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 200;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#account > div form .signin__container button:hover {
+  background-color: #5b85f8;
+}
+
+#account > div form .signin__container button span {
+  position: absolute;
+  right: 1rem;
+}
+
+#account > div form #signup__container p {
+  text-align: center;
+}
+
+#account > div form #signup__container p a {
+  color: #507fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  #account > div {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #new__story {
+    padding: 0 10%;
+  }
+  #new__story #new__story__input__title,
+  #new__story .new__story__input__text {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #new__story .rdw-editor-wrapper .rdw-editor-toolbar {
+    display: none;
+  }
+  #new__story .new__story__input__text {
+    min-height: 60vh;
+  }
 }
 /*# sourceMappingURL=index.css.map */

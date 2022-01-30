@@ -11,21 +11,37 @@ const Navigation = (props) => {
                                 id="navigation__column__icon"
                                 className="fas fa-feather-alt"
                             />
-                            {props.title}
+                            <span>{props.title}</span>
                         </h1>
                     </Link>
                 </div>
                 <div className="navigation__column">
-                    <Link to="/new-story">
-                        <button id="navigation__column__button">Post</button>
+                    {props.title === "Draft" ? (
+                        <button
+                            id="navigation__column__button"
+                            style={{
+                                backgroundColor: "#507fff",
+                                color: "white",
+                                border: "none",
+                            }}
+                            onClick={props.submit}
+                        >
+                            Submit
+                        </button>
+                    ) : (
+                        <Link to="/new-story">
+                            <button id="navigation__column__button">
+                                Post
+                            </button>
+                        </Link>
+                    )}
+                    <Link to="/account">
+                        <div id="navigation__column__profile__container">
+                            <span id="navigation__column__profile__letter">
+                                J
+                            </span>
+                        </div>
                     </Link>
-                    <div id="navigation__column__profile__image__container">
-                        <img
-                            id="navigation__column__profile__image"
-                            alt="profile"
-                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Eo_circle_cyan_letter-j.svg/768px-Eo_circle_cyan_letter-j.svg.png"
-                        />
-                    </div>
                 </div>
             </div>
             <hr id="navigation__gradient" />

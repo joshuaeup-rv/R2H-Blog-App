@@ -73,3 +73,30 @@
         grid-template-rows: 2rem;
     }
 }
+
+@media only screen and (max-width: 1600px) {
+    #post {
+        padding-left: 15rem;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #post {
+        grid-template-columns: 2fr 1fr;
+
+        .post__column:nth-child(2) {
+            width: auto;
+            justify-self: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #post {
+        grid-template-columns: 1fr;
+
+        .post__column:nth-child(2) {
+            grid-row: 1;
+        }
+    }
+}
