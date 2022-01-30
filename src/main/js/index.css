@@ -503,6 +503,11 @@ body {
   cursor: pointer;
 }
 
+#account > div form .signin__container button a {
+  text-decoration: none;
+  color: white;
+}
+
 #account > div form .signin__container button:hover {
   background-color: #5b85f8;
 }

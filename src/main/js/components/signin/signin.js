@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Signin = (props) => {
     return (
         <div>
@@ -5,18 +7,20 @@ const Signin = (props) => {
             <form>
                 <div className="signin__container">
                     <label>Email</label>
-                    <input type="text" />
+                    <input type="email" />
                 </div>
                 <div className="signin__container">
                     <label>Password</label>
-                    <input type="text" />
+                    <input type="password" />
                 </div>
                 <div className="signin__container">
                     <button>
-                        Sign in{" "}
-                        <span>
-                            <i className="fas fa-arrow-right"></i>
-                        </span>
+                        <Link exact path to="/feed">
+                            Sign in{" "}
+                            <span>
+                                <i className="fas fa-arrow-right"></i>
+                            </span>
+                        </Link>
                     </button>
                 </div>
                 <div id="signup__container">

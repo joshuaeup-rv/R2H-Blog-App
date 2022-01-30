@@ -9,11 +9,11 @@ const Signup = (props) => {
                 </div>
                 <div className="signin__container">
                     <label>Email</label>
-                    <input type="text" />
+                    <input type="email" />
                 </div>
                 <div className="signin__container">
                     <label>Password</label>
-                    <input type="text" />
+                    <input type="password" />
                 </div>
                 <div className="signin__container">
                     <button>

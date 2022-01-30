@@ -5,7 +5,7 @@ const Navigation = (props) => {
         <>
             <div id="navigation">
                 <div className="navigation__column">
-                    <Link to="/">
+                    <Link to="/feed">
                         <h1 id="navigation__column__title">
                             <i
                                 id="navigation__column__icon"
@@ -35,7 +35,7 @@ const Navigation = (props) => {
                             </button>
                         </Link>
                     )}
-                    <Link to="/account">
+                    <Link to="/">
                         <div id="navigation__column__profile__container">
                             <span id="navigation__column__profile__letter">
                                 J
