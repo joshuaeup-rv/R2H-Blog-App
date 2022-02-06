@@ -24,11 +24,12 @@ const NewStory = () => {
             <Navigation title="Draft" submit={submitPost} />
             <div id="new__story">
                 <input id="new__story__input__title" placeholder="Title" />
-                <Editor
+                {/* <Editor
                     editorClassName="new__story__input__text"
                     editorState={editorState}
                     onEditorStateChange={onEditorStateChange}
-                />
+                /> */}
+                <textarea className="new__story__input__text" />
             </div>
         </>
     );

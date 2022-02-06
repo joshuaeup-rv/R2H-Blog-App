@@ -1,39 +1,21 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 import NewWriter from "../../components/newWriter/newWriter";
 import Post from "../../components/post/post";
 
-const titles = [
-    "Web Application Architecture",
-    "(Why) Is jQuery Gone?",
-    "Implement email authentication with React + RESTful API",
-    "Go (Golang): Clean Architecture & Repositories vs Transactions",
-    "Web Application Architecture",
-    "(Why) Is jQuery Gone?",
-    "Implement email authentication with React + RESTful API",
-    "Go (Golang): Clean Architecture & Repositories vs Transactions",
-    "Web Application Architecture",
-    "(Why) Is jQuery Gone?",
-    "Implement email authentication with React + RESTful API",
-    "Go (Golang): Clean Architecture & Repositories vs Transactions",
-    "Web Application Architecture",
-    "(Why) Is jQuery Gone?",
-    "Implement email authentication with React + RESTful API",
-    "Go (Golang): Clean Architecture & Repositories vs Transactions",
-    "Web Application Architecture",
-    "(Why) Is jQuery Gone?",
-    "Implement email authentication with React + RESTful API",
-    "Go (Golang): Clean Architecture & Repositories vs Transactions",
-];
-
-const Home = () => {
+const Home = (props) => {
     return (
         <>
             <Navigation title="Medium " />
             <div id="home">
                 <div>
-                    {titles.map((title, index) => {
-                        return <Post key={index} title={title} />;
+                    {props.posts.map((post) => {
+                        return (
+                            <Link to={`/story/${post.id}`} key={post.id}>
+                                <Post title={post.title} />
+                            </Link>
+                        );
                     })}
                 </div>
 
