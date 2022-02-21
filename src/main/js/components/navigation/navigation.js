@@ -5,15 +5,11 @@ const Navigation = (props) => {
         <>
             <div id="navigation">
                 <div className="navigation__column">
-                    <Link to="/feed">
-                        <h1 id="navigation__column__title">
-                            <i
-                                id="navigation__column__icon"
-                                className="fas fa-feather-alt"
-                            />
+                    <h1 id="navigation__column__title">
+                        <Link to="/feed">
                             <span>{props.title}</span>
-                        </h1>
-                    </Link>
+                        </Link>
+                    </h1>
                 </div>
                 <div className="navigation__column">
                     {props.title === "Draft" ? (
@@ -44,7 +40,6 @@ const Navigation = (props) => {
                     </Link>
                 </div>
             </div>
-            <hr id="navigation__gradient" />
         </>
     );
 };

@@ -15,12 +15,7 @@ const Signin = (props) => {
                 </div>
                 <div className="signin__container">
                     <button>
-                        <Link exact path to="/feed">
-                            Sign in{" "}
-                            <span>
-                                <i className="fas fa-arrow-right"></i>
-                            </span>
-                        </Link>
+                        <Link to="/feed">Sign in</Link>
                     </button>
                 </div>
                 <div id="signup__container">

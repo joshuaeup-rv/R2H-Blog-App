@@ -16,12 +16,7 @@ const Signup = (props) => {
                     <input type="password" />
                 </div>
                 <div className="signin__container">
-                    <button>
-                        Register{" "}
-                        <span>
-                            <i className="fas fa-arrow-right"></i>
-                        </span>
-                    </button>
+                    <button>Register</button>
                 </div>
                 <div id="signup__container">
                     <p>

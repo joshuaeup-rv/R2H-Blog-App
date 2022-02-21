@@ -1,9 +1,11 @@
 #post {
-    padding-left: 20rem;
+    background-color: #ffffff;
     margin: 2rem 0;
+    padding: 1rem 2rem;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 6rem;
     grid-template-columns: 1fr auto;
+    border-radius: 2px;
 
     .post__column {
         display: grid;

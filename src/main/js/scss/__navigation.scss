@@ -1,8 +1,9 @@
 #navigation {
     background-color: #ffffff;
-    height: 7vh;
+    height: 10vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     line-height: 4vh;
-    padding: 0 20rem 0 20rem;
+    padding: 0 8rem 0 8rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
@@ -52,7 +53,7 @@
         }
 
         #navigation__column__profile__letter {
-            background-color: #00aec2;
+            background-color: #5271ff;
             text-align: center;
             align-self: center;
             border-radius: 50%/50%;
@@ -76,24 +77,6 @@
         border-color: black;
         cursor: pointer;
     }
-}
-
-#navigation__gradient {
-    height: 2rem;
-    margin: 0;
-    border: none;
-    background: linear-gradient(
-        to bottom,
-        #f6f6f6,
-        #f7f7f7,
-        #f8f8f8,
-        #f9f9f9,
-        #fafafa,
-        #fbfbfb,
-        #fcfcfc,
-        #fdfdfd,
-        #fefefe
-    );
 }
 
 @media only screen and (max-width: 1300px) {

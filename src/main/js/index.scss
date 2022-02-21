@@ -1,11 +1,15 @@
 @import "./scss/_navigation";
 @import "./scss/_post";
 @import "./scss/_newWriter";
+@import "./scss/_popup";
 
+html {
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f7fbfc;
 }
 
 /* Home */
@@ -13,8 +17,9 @@ body {
 #home {
     position: relative;
     display: grid;
-    grid-gap: 5rem;
+    grid-gap: 10rem;
     grid-template-columns: 1.5fr 1fr;
+    margin: 0 7rem;
 
     a {
         text-decoration: none;
@@ -40,26 +45,43 @@ body {
     }
 }
 
+.story__button__container__back {
+    margin: 3rem 0;
+    margin-left: 8rem;
+    justify-self: start;
+
+    .story__button__back {
+        background: transparent;
+        color: #a5a5a5;
+        border: none;
+        font-size: 1.3rem;
+        justify-self: left;
+    }
+
+    .story__button__back:hover {
+        cursor: pointer;
+    }
+}
+
 #new__story {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 70%;
     justify-content: center;
     grid-gap: 2rem;
-    padding: 0 30%;
+
     #new__story__input__title,
     .new__story__input__text {
         height: 4rem;
-        font-size: 3rem;
-        border: solid #d9d9d9 1px;
-        border-top: none;
-        border-right: none;
-        border-bottom: none;
-        padding-left: 1rem;
+        font-size: 2rem;
+        border: solid #949494 1px;
+        padding: 1rem 2rem;
+        color: #bcbcbc;
     }
 
     .new__story__input__text {
         font-size: 1.5rem;
-        min-height: 50vh;
+        min-height: 40vh;
+        padding-top: 2rem;
     }
 
     #new__story__input__title::placeholder,
@@ -67,14 +89,14 @@ body {
         color: #b3b3b1;
     }
 
-    #new__story__input__title:active,
-    #new__story__input__title:visited,
-    #new__story__input__title:hover,
-    .new__story__input__text:active,
-    .new__story__input__text:visited,
-    .new__story__input__text:hover {
-        outline: none;
-    }
+    // #new__story__input__title:active,
+    // #new__story__input__title:visited,
+    // #new__story__input__title:hover,
+    // .new__story__input__text:active,
+    // .new__story__input__text:visited,
+    // .new__story__input__text:hover {
+    //     outline: none;
+    // }
 
     $form-border: 10px;
 
@@ -113,12 +135,13 @@ body {
 
     > div {
         display: grid;
-        padding: 0 3rem;
+        padding: 0 8rem;
         align-items: center;
         height: 70vh;
-        width: 35vw;
+        width: 45vw;
         grid-gap: 3rem;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 15px;
 
         h1 {
             font-weight: 400;
@@ -161,7 +184,7 @@ body {
 
                 button {
                     position: relative;
-                    background-color: #507fff;
+                    background-color: #004aad;
                     color: white;
                     padding: 0.8rem 1rem;
                     font-size: 1.3rem;
@@ -190,7 +213,7 @@ body {
                     text-align: center;
 
                     a {
-                        color: #507fff;
+                        color: #004aad;
                         font-weight: 700;
                         cursor: pointer;
                     }
@@ -203,12 +226,14 @@ body {
 /* Story */
 
 #story {
-    padding: 0 30rem;
+    text-align: center;
+    display: grid;
+    justify-content: center;
 
     #story__container__image {
         display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 60vh;
+        grid-template-columns: 30%;
+        grid-template-rows: 35vh;
         justify-content: center;
         align-items: center;
         margin-bottom: 2rem;
@@ -221,18 +246,21 @@ body {
 
     #story__container__image__title {
         color: black;
-        font-size: 3rem;
+        font-size: 2rem;
+        font-weight: 600;
         margin: 0;
-        text-align: left;
+        text-align: center;
         padding: 2rem 0;
+        padding-top: 0;
     }
 
     #story__container__text {
+        display: grid;
+        grid-template-columns: 60%;
+        justify-content: center;
         p {
             font-size: 2rem;
-            color: #2a2a2a;
-            font-family: charter, Georgia, Cambria, "Times New Roman", Times,
-                serif;
+            color: #a5a5a5;
             letter-spacing: -0.003em;
             line-height: 32px;
             font-size: 1.4rem;
