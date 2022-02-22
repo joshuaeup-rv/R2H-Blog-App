@@ -32,15 +32,16 @@ body {
         grid-template-columns: 1fr;
 
         #post {
-            padding: 0 10rem;
+            padding: 2rem 8rem;
         }
     }
 }
 
 @media only screen and (max-width: 700px) {
     #home {
+        margin: 0 2rem;
         #post {
-            padding: 0 5rem;
+            padding: 2rem 2rem;
         }
     }
 }
@@ -88,15 +89,6 @@ body {
     #new__story__input__text::placeholder {
         color: #b3b3b1;
     }
-
-    // #new__story__input__title:active,
-    // #new__story__input__title:visited,
-    // #new__story__input__title:hover,
-    // .new__story__input__text:active,
-    // .new__story__input__text:visited,
-    // .new__story__input__text:hover {
-    //     outline: none;
-    // }
 
     $form-border: 10px;
 
@@ -167,7 +159,7 @@ body {
                 label {
                     padding-left: 0.5rem;
                     padding-top: 0.5rem;
-                    color: #acadaf;
+                    color: #494a4b;
                 }
 
                 input {
@@ -268,35 +260,24 @@ body {
     }
 }
 
-@media only screen and (max-width: 1450px) {
-    #story {
-        padding: 0 20rem;
-    }
-}
-
-@media only screen and (max-width: 1300px) {
-    #story {
-        padding: 0 10rem;
-    }
-}
-
-@media only screen and (max-width: 950px) {
-    #story {
-        padding: 0 2rem;
-    }
-}
-
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1100px) {
     #story {
         #story__container__image {
-            grid-template-rows: auto;
+            grid-template-columns: auto;
         }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .story__button__container__back {
+        margin-left: 2rem;
     }
 }
 
 @media only screen and (max-width: 700px) {
     #account {
         > div {
+            padding: 0 3rem;
             width: auto;
         }
     }
@@ -304,10 +285,10 @@ body {
 
 @media only screen and (max-width: 1000px) {
     #new__story {
-        padding: 0 10%;
+        padding: 0;
         #new__story__input__title,
         .new__story__input__text {
-            width: 100%;
+            width: auto;
         }
     }
 }
@@ -316,10 +297,6 @@ body {
     #new__story {
         .rdw-editor-wrapper .rdw-editor-toolbar {
             display: none;
-        }
-
-        .new__story__input__text {
-            min-height: 60vh;
         }
     }
 }

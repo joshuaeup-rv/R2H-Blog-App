@@ -8,9 +8,9 @@ const Post = (props) => {
                         alt="profile"
                         src="https://miro.medium.com/fit/c/20/20/1*ceHirGi683U9Xn6tAlr0jQ.jpeg"
                     />
-                    <h4>
+                    <h2>
                         Joshua Proctor <span>in</span> Javarevisted
-                    </h4>
+                    </h2>
                 </div>
                 <div id="post__column__text__container">
                     <h2>{props.title}</h2>

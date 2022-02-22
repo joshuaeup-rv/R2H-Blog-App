@@ -6,12 +6,12 @@ const Signin = (props) => {
             <h1>Welcome back.</h1>
             <form>
                 <div className="signin__container">
-                    <label>Email</label>
-                    <input type="email" />
+                    <label htmlFor="email">Email</label>
+                    <input id="email" type="email" name="email" />
                 </div>
                 <div className="signin__container">
-                    <label>Password</label>
-                    <input type="password" />
+                    <label htmlFor="password">Password</label>
+                    <input id="password" type="password" name="password" />
                 </div>
                 <div className="signin__container">
                     <button>

@@ -19,7 +19,7 @@
         z-index: 3;
         border-radius: 30px;
         padding: 5rem;
-        color: #a29d9d;
+        color: #494a4b;
 
         div {
             span {
@@ -33,6 +33,16 @@
 
         p {
             font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #popup__overlay {
+        #popup__container {
+            padding: 3rem;
+            width: 60%;
+            height: 60%;
         }
     }
 }

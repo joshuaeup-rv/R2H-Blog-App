@@ -6,7 +6,7 @@ const Popup = (props) => {
             <div id="popup__container">
                 <div>
                     <span onClick={props.onClose}>
-                        <i class="fas fa-times"></i>
+                        <i className="fas fa-times"></i>
                     </span>
                 </div>
                 <h1>Challenge: {props.challenge}</h1>
