@@ -5,15 +5,20 @@ const Signup = (props) => {
             <form>
                 <div className="signin__container">
                     <label htmlFor="name">Name</label>
-                    <input id="name" type="text" name="name" />
+                    <input id="name" type="text" name="name" required />
                 </div>
                 <div className="signin__container">
                     <label htmlFor="email">Email</label>
-                    <input id="email" type="email" name="email" />
+                    <input id="email" type="email" name="email" required />
                 </div>
                 <div className="signin__container">
                     <label htmlFor="password">Password</label>
-                    <input id="password" type="password" name="password" />
+                    <input
+                        id="password"
+                        type="password"
+                        name="password"
+                        required
+                    />
                 </div>
                 <div className="signin__container">
                     <button>Register</button>
