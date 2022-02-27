@@ -62,20 +62,38 @@
             font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
                 "Lucida Sans", Arial, sans-serif;
             font-weight: 600;
+            transition: 0.2s ease-in all;
+            &:hover {
+                background-color: darken(#5271ff, 2%);
+            }
         }
     }
 
-    #navigation__column__button {
+    .navigation__column__button {
         height: 2rem;
         width: 5rem;
         background: transparent;
         border: solid 1px #757575;
         border-radius: 20px;
+        transition: 0.2s ease-in all;
+
+        &:hover {
+            border-color: darken(#757575, 2%);
+        }
     }
 
-    #navigation__column__button:hover {
+    .navigation__column__button:hover {
         border-color: black;
         cursor: pointer;
+    }
+
+    #navigation__column__button__submit {
+        background-color: #507fff;
+        color: white;
+        border: none;
+        &:hover {
+            background-color: darken(#507fff, 2%);
+        }
     }
 }
 

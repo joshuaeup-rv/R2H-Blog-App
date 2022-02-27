@@ -24,6 +24,11 @@
         div {
             span {
                 cursor: pointer;
+                transition: 0.2s ease-in all;
+            }
+
+            span:hover {
+                color: darken(#494a4b, 20%);
             }
         }
 

@@ -57,10 +57,12 @@ body {
         border: none;
         font-size: 1.3rem;
         justify-self: left;
+        transition: 0.2s ease-in all;
+        cursor: pointer;
     }
 
     .story__button__back:hover {
-        cursor: pointer;
+        color: darken(#a5a5a5, 2%);
     }
 }
 

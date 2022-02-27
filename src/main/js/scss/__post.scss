@@ -6,6 +6,11 @@
     grid-gap: 6rem;
     grid-template-columns: 1fr auto;
     border-radius: 2px;
+    transition: 0.2s ease-in all;
+
+    &:hover {
+        background-color: darken(#ffffff, 2%);
+    }
 
     .post__column {
         display: grid;

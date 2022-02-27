@@ -14,19 +14,15 @@ const Navigation = (props) => {
                 <div className="navigation__column">
                     {props.title === "Draft" ? (
                         <button
-                            id="navigation__column__button"
-                            style={{
-                                backgroundColor: "#507fff",
-                                color: "white",
-                                border: "none",
-                            }}
+                            id="navigation__column__button__submit"
+                            className="navigation__column__button"
                             onClick={props.submit}
                         >
                             Submit
                         </button>
                     ) : (
                         <Link to="/new-story">
-                            <button id="navigation__column__button">
+                            <button className="navigation__column__button">
                                 Post
                             </button>
                         </Link>

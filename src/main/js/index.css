@@ -82,19 +82,41 @@
   color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 600;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
 }
 
-#navigation #navigation__column__button {
+#navigation #navigation__column__profile__container #navigation__column__profile__letter:hover {
+  background-color: #4869ff;
+}
+
+#navigation .navigation__column__button {
   height: 2rem;
   width: 5rem;
   background: transparent;
   border: solid 1px #757575;
   border-radius: 20px;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
 }
 
-#navigation #navigation__column__button:hover {
+#navigation .navigation__column__button:hover {
+  border-color: #707070;
+}
+
+#navigation .navigation__column__button:hover {
   border-color: black;
   cursor: pointer;
+}
+
+#navigation #navigation__column__button__submit {
+  background-color: #507fff;
+  color: white;
+  border: none;
+}
+
+#navigation #navigation__column__button__submit:hover {
+  background-color: #4678ff;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -119,6 +141,12 @@
   -ms-grid-columns: 1fr auto;
       grid-template-columns: 1fr auto;
   border-radius: 2px;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+#post:hover {
+  background-color: #fafafa;
 }
 
 #post .post__column {
@@ -318,6 +346,12 @@
 
 #popup__overlay #popup__container div span {
   cursor: pointer;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+}
+
+#popup__overlay #popup__container div span:hover {
+  color: #171717;
 }
 
 #popup__overlay #popup__container h1 {
@@ -395,10 +429,13 @@ body {
   font-size: 1.3rem;
   -ms-grid-column-align: left;
       justify-self: left;
+  -webkit-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+  cursor: pointer;
 }
 
 .story__button__container__back .story__button__back:hover {
-  cursor: pointer;
+  color: #a0a0a0;
 }
 
 #new__story {
