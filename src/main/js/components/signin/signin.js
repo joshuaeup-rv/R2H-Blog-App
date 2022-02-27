@@ -4,7 +4,7 @@ const Signin = (props) => {
     return (
         <div>
             <h1>Welcome back.</h1>
-            <form>
+            <form onSubmit={props.authenticated}>
                 <div className="signin__container">
                     <label htmlFor="email">Email</label>
                     <input id="email" type="email" name="email" required />

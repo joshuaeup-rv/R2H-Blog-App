@@ -2,7 +2,7 @@ const Signup = (props) => {
     return (
         <div>
             <h1>Create Your Account</h1>
-            <form>
+            <form onSubmit={props.authenticated}>
                 <div className="signin__container">
                     <label htmlFor="name">Name</label>
                     <input id="name" type="text" name="name" required />
