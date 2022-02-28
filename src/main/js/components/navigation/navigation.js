@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
+import logo from "../../assets/DebugMe.png";
 
 const Navigation = (props) => {
     return (
         <>
             <div id="navigation">
                 <div className="navigation__column">
-                    <h1 id="navigation__column__title">
+                    <div id="navigation__column__image__container">
                         <Link to="/feed">
-                            <span>{props.title}</span>
+                            <img
+                                id="navigation__column__image"
+                                src={logo}
+                                alt="logo"
+                            />
                         </Link>
-                    </h1>
+                    </div>
                 </div>
                 <div className="navigation__column">
                     {props.title === "Draft" ? (

@@ -42,7 +42,7 @@ const Story = (props) => {
                     show={show}
                 />
             )}
-            <Navigation title="LOGO" />
+            <Navigation />
             <div id="story">
                 <div className="story__button__container__back">
                     <Link to="/feed">
@@ -56,11 +56,7 @@ const Story = (props) => {
                 <div id="story__container__image">
                     <img
                         className="story__container__image__wide"
-                        src={
-                            postImageArr[
-                                Math.floor(Math.random() * postImageArr.length)
-                            ]
-                        }
+                        src={post.postImage}
                         alt="Writing"
                     />
                 </div>

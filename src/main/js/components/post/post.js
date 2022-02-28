@@ -6,7 +6,7 @@ const Post = (props) => {
                     <img
                         id="post__column__profile__image"
                         alt="profile"
-                        src="https://miro.medium.com/fit/c/20/20/1*ceHirGi683U9Xn6tAlr0jQ.jpeg"
+                        src={props.profileImage}
                     />
                     <h2>
                         Joshua Proctor <span>in</span> Javarevisted
@@ -29,7 +29,7 @@ const Post = (props) => {
                     <img
                         id="post__column__image"
                         alt="profile"
-                        src="https://miro.medium.com/fit/c/200/134/1*kC-xl8XOmmaDm_GUI-eChw.jpeg"
+                        src={props.postImage}
                     />
                 </div>
             </div>

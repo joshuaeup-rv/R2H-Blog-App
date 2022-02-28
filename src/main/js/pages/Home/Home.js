@@ -24,7 +24,11 @@ const Home = (props) => {
                     {props.posts.map((post) => {
                         return (
                             <Link to={`/story/${post.id}`} key={post.id}>
-                                <Post title={post.title} />
+                                <Post
+                                    title={post.title}
+                                    profileImage={post.profileImage}
+                                    postImage={post.postImage}
+                                />
                             </Link>
                         );
                     })}
