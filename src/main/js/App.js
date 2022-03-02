@@ -50,7 +50,7 @@ const posts = [
         text: mock_text,
     },
     {
-        id: 4,
+        id: 5,
         title: "Stop Using Conditional Statements Everywhere in JavaScript, Use an Object Literal instead",
         profileImage: profileImage,
         postImage: postImageFive,
