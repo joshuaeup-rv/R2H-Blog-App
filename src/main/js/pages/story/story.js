@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
-import popupData from "../../challenges.json";
-import Popup from "../../components/popup/popup";
+// import popupData from "../../challenges.json";
+// import Popup from "../../components/popup/popup";
 
 const postImageArr = [
     "https://images.pexels.com/photos/851213/pexels-photo-851213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
@@ -30,18 +30,18 @@ function findPost(posts, id) {
 const Story = (props) => {
     const { id } = useParams();
     const post = findPost(props.posts, id);
-    const [show, setShow] = useState(true);
+    // const [show, setShow] = useState(true);
 
     return (
         <>
-            {show && (
+            {/* {show && (
                 <Popup
                     challenge={popupData.story.challenge}
                     text={popupData.story.text}
                     onClose={() => setShow(!show)}
                     show={show}
                 />
-            )}
+            )} */}
             <Navigation />
             <div id="story">
                 <div className="story__button__container__back">

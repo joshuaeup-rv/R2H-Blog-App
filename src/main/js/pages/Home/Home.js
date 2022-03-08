@@ -8,6 +8,7 @@ import Popup from "../../components/popup/popup";
 
 const Home = (props) => {
     const [show, setShow] = useState(true);
+
     return (
         <>
             {show && (

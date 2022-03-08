@@ -1,6 +1,7 @@
 import React from "react";
 
 const Popup = (props) => {
+
     return (
         <div id="popup__overlay">
             <div id="popup__container">
