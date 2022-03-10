@@ -1,4 +1,5 @@
 #navigation {
+  position: relative;
   background-color: #ffffff;
   height: 10vh;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -15,6 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 3;
 }
 
 #navigation .navigation__column a {
@@ -684,6 +686,32 @@ body {
   letter-spacing: -0.003em;
   line-height: 32px;
   font-size: 1.4rem;
+}
+
+#not-found {
+  height: 90vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #14AA84;
+}
+
+#not-found h1 {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+}
+
+#not-found #not-found__image {
+  height: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {

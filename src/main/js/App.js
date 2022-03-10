@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Redirect } from "react-router-dom";
 
 // Pages
 import Account from "./pages/account/account";
@@ -14,6 +14,7 @@ import postImageTwo from "./assets/blog-bg-two.jpg";
 import postImageThree from "./assets/blog-bg-three.jpg";
 import postImageFour from "./assets/blog-bg-four.jpg";
 import postImageFive from "./assets/blog-bg-five.jpg";
+import NotFound from "./pages/notFound/notFound";
 const profileImage =
     "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80";
 
@@ -78,6 +79,10 @@ function App(props) {
                         exact
                         path="/new-story"
                         element={<NewStory />}
+                    ></Route>
+                    <Route
+                        path="/*"
+                        element={<NotFound />}
                     ></Route>
                 </Routes>
             </>
