@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 import NewWriter from "../../components/newWriter/newWriter";
@@ -8,6 +8,10 @@ import Popup from "../../components/popup/popup";
 
 const Home = (props) => {
     const [show, setShow] = useState(true);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
     return (
         <>
             {show && (
