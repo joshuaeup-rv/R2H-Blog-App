@@ -48,7 +48,7 @@
     }
 
     #navigation__column__profile__container {
-        height: 2.5rem;
+        height: 100%;
         width: 2.5rem;
         display: grid;
         justify-self: end;
@@ -61,22 +61,6 @@
 
         #navigation__column__profile:hover {
             cursor: pointer;
-        }
-
-        #navigation__column__profile__letter {
-            background-color: #5271ff;
-            text-align: center;
-            align-self: center;
-            border-radius: 50%/50%;
-            font-size: 1.5rem;
-            color: white;
-            font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-                "Lucida Sans", Arial, sans-serif;
-            font-weight: 600;
-            transition: 0.2s ease-in all;
-            &:hover {
-                background-color: darken(#5271ff, 2%);
-            }
         }
     }
 

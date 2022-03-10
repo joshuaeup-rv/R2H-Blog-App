@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/DebugMe.png";
+import Avatar from 'react-avatar';
+
 
 const Navigation = (props) => {
     return (
@@ -34,9 +36,7 @@ const Navigation = (props) => {
                     )}
                     <Link to="/">
                         <div id="navigation__column__profile__container">
-                            <span id="navigation__column__profile__letter">
-                                J
-                            </span>
+                            <Avatar name="User Name" round={true} size="40" textSizeRatio="3"/>
                         </div>
                     </Link>
                 </div>
