@@ -4,12 +4,18 @@ import postImageTwo from "./assets/blog-bg-two.jpg";
 import postImageThree from "./assets/blog-bg-three.jpg";
 import postImageFour from "./assets/blog-bg-four.jpg";
 import postImageFive from "./assets/blog-bg-five.jpg";
+
+// Standard Data
 const profileImage =
-    "https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80";
+    "https://microbiology.ucr.edu/sites/g/files/rcwecm2866/files/styles/form_preview/public/blank-profile-pic.png?itok=xMM7pLfb";
 
 const mock_text =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, \n \n when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
+
+const calculateReadLength = (text) => {
+    return Math.round(text.length / 200)
+}
 
 const posts = [
     {
@@ -18,6 +24,10 @@ const posts = [
         profileImage: profileImage,
         postImage: postImageOne,
         text: mock_text,
+        author: "Shari Merrill",
+        group: "Javaland",
+        date: "Jan 15",
+        read_length: calculateReadLength(mock_text)
     },
     {
         id: 2,
@@ -25,6 +35,10 @@ const posts = [
         profileImage: profileImage,
         postImage: postImageTwo,
         text: mock_text,
+        author: "Tess Jackie",
+        group: "Cland",
+        date: "Jan 15",
+        read_length: calculateReadLength(mock_text)
     },
     {
         id: 3,
@@ -32,6 +46,10 @@ const posts = [
         profileImage: profileImage,
         postImage: postImageThree,
         text: mock_text,
+        author: "Levi Philip",
+        group: "Reactland",
+        date: "Jan 15",
+        read_length: calculateReadLength(mock_text)
     },
     {
         id: 4,
@@ -39,6 +57,10 @@ const posts = [
         profileImage: profileImage,
         postImage: postImageFour,
         text: mock_text,
+        author: "Kristin Salena",
+        group: "Angularland",
+        date: "Jan 15",
+        read_length: calculateReadLength(mock_text)
     },
     {
         id: 5,
@@ -46,6 +68,10 @@ const posts = [
         profileImage: profileImage,
         postImage: postImageFive,
         text: mock_text,
+        author: "Allan Mansel",
+        group: "Cyberland",
+        date: "Jan 15",
+        read_length: calculateReadLength(mock_text)
     },
 ];
 

@@ -1,26 +1,22 @@
+import Avatar from 'react-avatar';
+
 const Post = (props) => {
     return (
         <div id="post">
             <div className="post__column">
                 <div id="post__column__profile__image__container">
-                    <img
-                        id="post__column__profile__image"
-                        alt="profile"
-                        src={props.profileImage}
-                    />
+                    <Avatar name={props.author} round={true} size="30" textSizeRatio="3"/>
                     <h2>
-                        Joshua Proctor <span>in</span> Javarevisted
+                        {props.author} <span>in</span> {props.group}
                     </h2>
                 </div>
                 <div id="post__column__text__container">
                     <h2>{props.title}</h2>
                     <p>
-                        This is a rundown of amazing Java project ideas that
-                        will set off your career in programming. Given, there
-                        are dozens of projects that…
+                        {props.text.slice(0, 220)}...
                     </p>
                     <p>
-                        Jan 15 · 3 min read · <span>Selected for you</span>
+                        {props.date} · {props.read_length} min read · <span>Selected for you</span>
                     </p>
                 </div>
             </div>

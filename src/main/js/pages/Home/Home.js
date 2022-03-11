@@ -32,6 +32,11 @@ const Home = (props) => {
                                     title={post.title}
                                     profileImage={post.profileImage}
                                     postImage={post.postImage}
+                                    text={post.text}
+                                    author={post.author}
+                                    group={post.group}
+                                    date={post.date}
+                                    read_length={post.read_length}
                                 />
                             </Link>
                         );
