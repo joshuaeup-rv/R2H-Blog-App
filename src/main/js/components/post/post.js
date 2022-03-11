@@ -5,7 +5,7 @@ const Post = (props) => {
         <div id="post">
             <div className="post__column">
                 <div id="post__column__profile__image__container">
-                    <Avatar name={props.author} round={true} size="30" textSizeRatio="3"/>
+                    <Avatar name={props.author} round={true} size="30" textSizeRatio={3}/>
                     <h2>
                         {props.author} <span>in</span> {props.group}
                     </h2>

@@ -36,7 +36,7 @@ const Navigation = (props) => {
                     )}
                     <Link to="/">
                         <div id="navigation__column__profile__container">
-                            <Avatar name="User Name" round={true} size="40" textSizeRatio="3"/>
+                            <Avatar name="User Name" round={true} size="40" textSizeRatio={3}/>
                         </div>
                     </Link>
                 </div>
