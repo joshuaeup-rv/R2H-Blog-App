@@ -23,7 +23,7 @@ const NewWriter = () => {
                         <p>
                         Finding and isolating the problem in an application can be a difficult task when working with extensive code. Here are a few helpful tips for making the process a tad bit easier and less stressful: 
                             <ul>
-                                <li>Use stand-alone debgger tools,like Chrome DevTools, and look at the code's logging. </li>
+                                <li>Use stand-alone debgger tools, like Chrome DevTools, and look at the code's logging. </li>
                                 <br></br>
                                 <li>Be sure to read all error messages and become familiar with standard ones.</li>
                                 <br></br>

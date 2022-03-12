@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
-// import popupData from "../../challenges.json";
-// import Popup from "../../components/popup/popup";
+import popupData from "../../challenges.json";
+import Popup from "../../components/popup/popup";
 
 
 // Method to find post using id as a param
@@ -25,7 +25,7 @@ function findPost(posts, id) {
 const Story = (props) => {
     const { id } = useParams();
     const post = findPost(props.posts, id);
-    // const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true);
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -33,14 +33,14 @@ const Story = (props) => {
 
     return (
         <>
-            {/* {show && (
+            {show && (
                 <Popup
                     challenge={popupData.story.challenge}
                     text={popupData.story.text}
                     onClose={() => setShow(!show)}
                     show={show}
                 />
-            )} */}
+            )}
             <Navigation />
             <div id="story">
                 <div className="story__button__container__back">
