@@ -1,11 +1,12 @@
 #popup__overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: rgba(128, 128, 128, 0.493);
     height: 100vh;
     width: 100vw;
     z-index: 3;
+
     #popup__container {
         background-color: #ffffff;
         display: grid;

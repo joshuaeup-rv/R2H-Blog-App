@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navigation from "../../components/navigation/navigation";
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 // import popupData from "../../challenges.json";
 
 const NewStory = () => {
-    // const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+    
     const submitPost = () => {
         console.log("Submitted");
     };

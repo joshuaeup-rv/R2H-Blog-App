@@ -1,4 +1,5 @@
 #navigation {
+  position: relative;
   background-color: #ffffff;
   height: 10vh;
   -webkit-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -15,6 +16,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 3;
 }
 
 #navigation .navigation__column a {
@@ -61,7 +63,7 @@
 }
 
 #navigation #navigation__column__profile__container {
-  height: 2.5rem;
+  height: 100%;
   width: 2.5rem;
   display: -ms-grid;
   display: grid;
@@ -79,25 +81,6 @@
 
 #navigation #navigation__column__profile__container #navigation__column__profile:hover {
   cursor: pointer;
-}
-
-#navigation #navigation__column__profile__container #navigation__column__profile__letter {
-  background-color: #5271ff;
-  text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  border-radius: 50%/50%;
-  font-size: 1.5rem;
-  color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-weight: 600;
-  -webkit-transition: 0.2s ease-in all;
-  transition: 0.2s ease-in all;
-}
-
-#navigation #navigation__column__profile__container #navigation__column__profile__letter:hover {
-  background-color: #4869ff;
 }
 
 #navigation .navigation__column__button {
@@ -178,14 +161,6 @@
   grid-gap: 0.5em;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
-}
-
-#post .post__column #post__column__profile__image__container #post__column__profile__image,
-#post .post__column #post__column__profile__image__container #post__column__image,
-#post .post__column #post__column__image__container #post__column__profile__image,
-#post .post__column #post__column__image__container #post__column__image {
-  width: 100%;
-  height: 100%;
 }
 
 #post .post__column #post__column__profile__image__container h2,
@@ -326,7 +301,7 @@
 }
 
 #popup__overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(128, 128, 128, 0.493);
@@ -684,6 +659,32 @@ body {
   letter-spacing: -0.003em;
   line-height: 32px;
   font-size: 1.4rem;
+}
+
+#not-found {
+  height: 90vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #14AA84;
+}
+
+#not-found h1 {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+}
+
+#not-found #not-found__image {
+  height: auto;
+  width: 100%;
 }
 
 @media only screen and (max-width: 1100px) {

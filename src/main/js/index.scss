@@ -262,6 +262,28 @@ body {
     }
 }
 
+#not-found {
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #14AA84;
+
+    h1 {
+        color: white;
+        font-size: 5rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    #not-found__image {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
 @media only screen and (max-width: 1100px) {
     #story {
         #story__container__image {

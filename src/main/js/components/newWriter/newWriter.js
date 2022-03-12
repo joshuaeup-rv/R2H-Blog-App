@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
-
 const NewWriter = () => {
+
+    const startWriting = (e) => {
+        e.preventDefault();
+        window.location.href = "/new-story";
+       
+    };
+
     return (
         <>
             <div id="new__writer__container">
@@ -31,9 +36,7 @@ const NewWriter = () => {
                             </a> for Windows. 
 
                         </p>
-                        <Link to="/new-story">
-                            <button>Start writing</button>
-                        </Link>
+                        <button onClick={startWriting}>Start writing</button>
                     </div>
                 </div>
             </div>
