@@ -1,15 +1,35 @@
+import { useLocalStorage } from "../../utils/useLocalStorage";
+
 const Signup = (props) => {
+    const [name, setName] = useLocalStorage("name", "");
+    const [email, setEmail] = useLocalStorage("email", "");
+    const [password, setPassword] = useLocalStorage("password", "");
+
     return (
         <div>
             <h1>Create Your Account</h1>
             <form onSubmit={props.authenticated}>
                 <div className="signin__container">
                     <label htmlFor="name">Name</label>
-                    <input id="name" type="text" name="name" required />
+                    <input
+                        id="name"
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
                 </div>
                 <div className="signin__container">
                     <label htmlFor="email">Email</label>
-                    <input id="email" type="email" name="email" required />
+                    <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
                 </div>
                 <div className="signin__container">
                     <label htmlFor="password">Password</label>
@@ -17,11 +37,17 @@ const Signup = (props) => {
                         id="password"
                         type="password"
                         name="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                     />
                 </div>
                 <div className="signin__container">
-                    <button>Register</button>
+                    <input
+                        className="form__submit__btn"
+                        type="submit"
+                        value="Register"
+                    />
                 </div>
                 <div id="signup__container">
                     <p>

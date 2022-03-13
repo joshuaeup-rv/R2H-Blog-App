@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 import popupData from "../../challenges.json";
 import Popup from "../../components/popup/popup";
-
+import { getStorageValue } from "../../utils/useLocalStorage";
 
 // Method to find post using id as a param
 function findPost(posts, id) {
@@ -24,12 +24,13 @@ function findPost(posts, id) {
 
 const Story = (props) => {
     const { id } = useParams();
-    const post = findPost(props.posts, id);
+    const postData = getStorageValue("post", "");
+    const post = findPost(postData, id);
     const [show, setShow] = useState(true);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <>

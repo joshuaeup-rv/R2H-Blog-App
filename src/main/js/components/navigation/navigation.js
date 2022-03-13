@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/DebugMe.png";
-import Avatar from 'react-avatar';
-
+import Avatar from "react-avatar";
+import { getStorageValue } from "../../utils/useLocalStorage";
 
 const Navigation = (props) => {
+    const userName = getStorageValue("name", "");
     return (
         <>
             <div id="navigation">
@@ -36,7 +37,12 @@ const Navigation = (props) => {
                     )}
                     <Link to="/">
                         <div id="navigation__column__profile__container">
-                            <Avatar name="User Name" round={true} size="40" textSizeRatio={3}/>
+                            <Avatar
+                                name={userName}
+                                round={true}
+                                size="40"
+                                textSizeRatio={3}
+                            />
                         </div>
                     </Link>
                 </div>

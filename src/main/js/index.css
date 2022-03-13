@@ -529,6 +529,39 @@ body {
   text-align: center;
 }
 
+#account > div #wrong__credentials__prompt {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fcdce0;
+  border-radius: 10px;
+  border: none;
+  padding: 0 2rem;
+}
+
+#account > div #wrong__credentials__prompt p {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  color: #a45157;
+}
+
+#account > div #wrong__credentials__prompt span {
+  color: #a45157;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+#account > div #wrong__credentials__prompt span i {
+  cursor: pointer;
+}
+
 #account > div form {
   display: -ms-grid;
   display: grid;
@@ -566,11 +599,11 @@ body {
   outline: none;
 }
 
-#account > div form .signin__container button {
+#account > div form .signin__container .form__submit__btn {
   position: relative;
+  height: 2.5rem;
   background-color: #004aad;
   color: white;
-  padding: 0.8rem 1rem;
   font-size: 1.3rem;
   font-weight: 200;
   border-radius: 10px;
@@ -578,18 +611,8 @@ body {
   cursor: pointer;
 }
 
-#account > div form .signin__container button a {
-  text-decoration: none;
-  color: white;
-}
-
-#account > div form .signin__container button:hover {
+#account > div form .signin__container .form__submit__btn:hover {
   background-color: #5b85f8;
-}
-
-#account > div form .signin__container button span {
-  position: absolute;
-  right: 1rem;
 }
 
 #account > div form #signup__container p {
@@ -672,7 +695,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #14AA84;
+  background-color: #14aa84;
 }
 
 #not-found h1 {

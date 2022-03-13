@@ -5,13 +5,18 @@ import NewWriter from "../../components/newWriter/newWriter";
 import Post from "../../components/post/post";
 import popupData from "../../challenges.json";
 import Popup from "../../components/popup/popup";
+import { getStorageValue } from "../../utils/useLocalStorage";
 
 const Home = (props) => {
     const [show, setShow] = useState(true);
+    const [posts, setPosts] = useState(props.posts);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-      }, [])
+        window.scrollTo(0, 0);
+
+        setPosts(getStorageValue("post", props.posts));
+    }, []);
+
     return (
         <>
             {show && (
@@ -25,12 +30,11 @@ const Home = (props) => {
             <Navigation title="LOGO " />
             <div id="home">
                 <div>
-                    {props.posts.map((post) => {
+                    {posts.map((post) => {
                         return (
                             <Link to={`/story/${post.id}`} key={post.id}>
                                 <Post
                                     title={post.title}
-                                    profileImage={post.profileImage}
                                     postImage={post.postImage}
                                     text={post.text}
                                     author={post.author}
