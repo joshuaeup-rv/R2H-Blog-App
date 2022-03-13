@@ -45,6 +45,12 @@ const NewStory = () => {
 
         window.location.href = "/feed";
         console.log("Submitted");
+        clearInputs();
+    };
+
+    const clearInputs = () => {
+        setTitle("");
+        setText("");
     };
 
     return (
