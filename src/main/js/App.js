@@ -8,7 +8,7 @@ import Home from "./pages/Home/Home";
 import NewStory from "./pages/new_story/new_story";
 import Story from "./pages/story/story";
 import NotFound from "./pages/notFound/notFound";
-import posts from "./post-data"
+import postData from "./post-data";
 
 function App() {
     return (
@@ -19,22 +19,19 @@ function App() {
                     <Route
                         exact
                         path="/feed"
-                        element={<Home posts={posts} />}
+                        element={<Home posts={postData} />}
                     ></Route>
                     <Route
                         exact
                         path="/story/:id"
-                        element={<Story posts={posts} />}
+                        element={<Story posts={postData} />}
                     ></Route>
                     <Route
                         exact
                         path="/new-story"
-                        element={<NewStory />}
+                        element={<NewStory posts={postData} />}
                     ></Route>
-                    <Route
-                        path="/*"
-                        element={<NotFound />}
-                    ></Route>
+                    <Route path="/*" element={<NotFound />}></Route>
                 </Routes>
             </>
         </Router>

@@ -145,6 +145,31 @@ body {
 
         $form-border: 10px;
 
+        #wrong__credentials__prompt {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fcdce0;
+            border-radius: $form-border;
+            border: none;
+            padding: 0 2rem;
+
+            p {
+                justify-self: start;
+                color: #a45157;
+            }
+
+            span {
+                color: #a45157;
+                justify-self: end;
+
+                i {
+                    cursor: pointer;
+                }
+            }
+        }
+
         form {
             display: grid;
             align-self: flex-start;
@@ -176,28 +201,19 @@ body {
                     outline: none;
                 }
 
-                button {
+                .form__submit__btn {
                     position: relative;
+                    height: 2.5rem;
                     background-color: #004aad;
                     color: white;
-                    padding: 0.8rem 1rem;
                     font-size: 1.3rem;
                     font-weight: 200;
                     border-radius: $form-border;
                     border: none;
                     cursor: pointer;
 
-                    a {
-                        text-decoration: none;
-                        color: white;
-                    }
-
                     &:hover {
                         background-color: #5b85f8;
-                    }
-                    span {
-                        position: absolute;
-                        right: 1rem;
                     }
                 }
             }
@@ -268,7 +284,7 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: #14AA84;
+    background-color: #14aa84;
 
     h1 {
         color: white;
@@ -282,7 +298,6 @@ body {
         width: 100%;
     }
 }
-
 
 @media only screen and (max-width: 1100px) {
     #story {
