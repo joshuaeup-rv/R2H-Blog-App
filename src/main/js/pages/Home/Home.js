@@ -5,8 +5,17 @@ import NewWriter from "../../components/newWriter/newWriter";
 import Post from "../../components/post/post";
 import popupData from "../../challenges.json";
 import Popup from "../../components/popup/popup";
+import Problem from "../../components/problem/problem";
 
 const Home = (props) => {
+
+    const problems = [
+        { name: "Navigation (Easy)"}, 
+        { name: "Blog Post (Hard)"}, 
+        { name: "Start Writing (Medium)" }, 
+        { name:"Responsive (Bonus)"}
+    ];
+
     const [show, setShow] = useState(true);
 
     useEffect(() => {
@@ -17,10 +26,15 @@ const Home = (props) => {
             {show && (
                 <Popup
                     challenge={popupData.feed.challenge}
+                    intro={popupData.feed.intro}
                     text={popupData.feed.text}
                     onClose={() => setShow(!show)}
                     show={show}
-                />
+                >
+                {problems.map(pblm => 
+                     <Problem problem={pblm.name}></Problem>
+                )}
+                </Popup>
             )}
             <Navigation title="LOGO " />
             <div id="home">

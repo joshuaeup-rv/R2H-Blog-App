@@ -1,11 +1,12 @@
 {
     "login": {
         "challenge": "Login Page...",
-        "text": "Oh no!\nThe Blog app is missing blog posts!\nThere should be a total of 5 blog post.\nUse your debugging tools to ensure all blog posts display within the home page.\n\nRead the 'Helpful Deugging Tips' in the right side panel for clues. "
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
     },
     "feed": {
         "challenge": "Feed Page...",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
+        "intro":"Oh no!\nThe blog is a mess!",
+        "text": "The navigation bar is out of place and there should be a total of 5 blog post.\nUse your debugging tools to ensure all blog posts display within the home page. Read the 'Helpful Deugging Tips' in the right side panel for clues."
     },
     "newStory": {
         "challenge": "New Story Page...",

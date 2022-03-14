@@ -10,8 +10,12 @@ const Popup = (props) => {
                         <i className="fas fa-times"></i>
                     </span>
                 </div>
-                <h1>Challenge: {props.challenge}</h1>
+                <h1>Challenge: {props.challenge}
+                </h1>
+                <h2>{props.intro}
+                </h2>
                 <p>{props.text}</p>
+                {props.children}
             </div>
         </div>
     );
