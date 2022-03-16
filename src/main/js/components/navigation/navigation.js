@@ -4,6 +4,7 @@ import Avatar from "react-avatar";
 import { getStorageValue } from "../../utils/useLocalStorage";
 
 const Navigation = (props) => {
+    // Pull name value from local storage
     const userName = getStorageValue("name", "");
     return (
         <>
@@ -20,6 +21,8 @@ const Navigation = (props) => {
                     </div>
                 </div>
                 <div className="navigation__column">
+                    {/* If the title passed down through props is equal to "Draft" then display submit button
+                        Otherwise display the Post navigation button */}
                     {props.title === "Draft" ? (
                         <button
                             id="navigation__column__button__submit"

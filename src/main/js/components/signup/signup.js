@@ -1,6 +1,7 @@
 import { useLocalStorage } from "../../utils/useLocalStorage";
 
 const Signup = (props) => {
+    // Store the inputted values by the user into local storage
     const [name, setName] = useLocalStorage("name", "");
     const [email, setEmail] = useLocalStorage("email", "");
     const [password, setPassword] = useLocalStorage("password", "");
@@ -11,6 +12,7 @@ const Signup = (props) => {
             <form onSubmit={props.authenticated}>
                 <div className="signin__container">
                     <label htmlFor="name">Name</label>
+                    {/* Captures the input entered by the user in realtime then stores the value into a specified state variable */}
                     <input
                         id="name"
                         type="text"
@@ -22,6 +24,7 @@ const Signup = (props) => {
                 </div>
                 <div className="signin__container">
                     <label htmlFor="email">Email</label>
+                    {/* Captures the input entered by the user in realtime then stores the value into a specified state variable */}
                     <input
                         id="email"
                         type="email"
@@ -33,6 +36,7 @@ const Signup = (props) => {
                 </div>
                 <div className="signin__container">
                     <label htmlFor="password">Password</label>
+                    {/* Captures the input entered by the user in realtime then stores the value into a specified state variable */}
                     <input
                         id="password"
                         type="password"
@@ -52,6 +56,7 @@ const Signup = (props) => {
                 <div id="signup__container">
                     <p>
                         Already have an account?{" "}
+                        {/* If this tag is clicked update the UI to hide the sign up UI and display the sign in UI */}
                         <a id="signup__container__link" onClick={props.update}>
                             Sign in
                         </a>

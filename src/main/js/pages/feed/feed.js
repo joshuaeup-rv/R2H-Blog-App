@@ -8,17 +8,23 @@ import Popup from "../../components/popup/popup";
 import { getStorageValue } from "../../utils/useLocalStorage";
 
 const Home = (props) => {
+    // State variables
     const [show, setShow] = useState(true);
     const [posts, setPosts] = useState(props.posts);
 
+    // Function that triggers as soon as the page loads
     useEffect(() => {
+        // Scroll to the top of the screen as the page loads
         window.scrollTo(0, 0);
 
+        // Updates state variable to store the values in local storage at a specified key
+        // And provide a default value of props.posts which is a json file declared in the file structure
         setPosts(getStorageValue("post", props.posts));
     }, []);
 
     return (
         <>
+            {/* If the show state variable is set to true then display the Popup component */}
             {show && (
                 <Popup
                     challenge={popupData.feed.challenge}
@@ -30,6 +36,7 @@ const Home = (props) => {
             <Navigation title="LOGO " />
             <div id="home">
                 <div>
+                    {/* Displays the posts stored in the posts state variable */}
                     {posts.map((post) => {
                         return (
                             <Link to={`/story/${post.id}`} key={post.id}>
@@ -46,7 +53,7 @@ const Home = (props) => {
                         );
                     })}
                 </div>
-
+                {/* Displays the New Writer UI Component */}
                 <NewWriter />
             </div>
         </>

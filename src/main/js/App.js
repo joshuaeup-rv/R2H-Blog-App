@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Pages
 import Account from "./pages/account/account";
-import Home from "./pages/home/home";
+import Feed from "./pages/feed/feed";
 import NewStory from "./pages/new_story/new_story";
 import Story from "./pages/story/story";
 import NotFound from "./pages/notFound/notFound";
@@ -14,12 +14,13 @@ function App() {
     return (
         <Router>
             <>
+                {/* All of the routes reachable in the application */}
                 <Routes>
                     <Route exact path="/" element={<Account />}></Route>
                     <Route
                         exact
                         path="/feed"
-                        element={<Home posts={postData} />}
+                        element={<Feed posts={postData} />}
                     ></Route>
                     <Route
                         exact

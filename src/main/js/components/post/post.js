@@ -17,6 +17,7 @@ const Post = (props) => {
                 </div>
                 <div id="post__column__text__container">
                     <h2>{props.title}</h2>
+                    {/* Create a preview of the article contents by limiting the amount of characters displayed to 220 */}
                     <p>{props.text.slice(0, 220)}...</p>
                     <p>
                         {props.date} · {props.read_length} min read ·{" "}
