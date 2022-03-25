@@ -1,0 +1,33 @@
+/* Home */
+
+#home {
+    position: relative;
+    display: grid;
+    grid-gap: 10rem;
+    grid-template-columns: 1.5fr 1fr;
+    margin: 0 7rem;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    #home {
+        grid-template-columns: 1fr;
+
+        #post {
+            padding: 2rem 8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #home {
+        margin: 0 2rem;
+        #post {
+            padding: 2rem 2rem;
+        }
+    }
+}

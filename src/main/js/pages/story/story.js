@@ -4,8 +4,9 @@ import Navigation from "../../components/navigation/navigation";
 import popupData from "../../challenges.json";
 import Popup from "../../components/popup/popup";
 import { getStorageValue } from "../../utils/useLocalStorage";
+import posts from "../../post-data";
 
-// Method to find post using id as a param
+// Function to find post using id as a param
 function findPost(posts, id) {
     // Find element with matching id
     const post = posts.find((element) => {
@@ -23,12 +24,19 @@ function findPost(posts, id) {
 }
 
 const Story = (props) => {
+    // Grab id param value currently entered within the url | Example = http://localhost:3001/story/2 - 2 would be considered the id param
     const { id } = useParams();
-    const postData = getStorageValue("post", "");
+    // Retrieve the value that is stored in local storage using a specified key
+    const postData = getStorageValue("post", posts);
+    // The resulting post from id search
     const post = findPost(postData, id);
+
+    // state variable that holds the modal open/close state
     const [show, setShow] = useState(true);
 
+    // Function that triggers as soon as the page loads
     useEffect(() => {
+        // Scroll to the top of the screen as the page loads
         window.scrollTo(0, 0);
     }, []);
 
