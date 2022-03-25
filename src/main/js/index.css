@@ -256,6 +256,14 @@
 #popup__overlay #popup__container p {
   font-size: 1.2rem;
 }
+#popup__overlay #popup__container .popup__challenges {
+  display: flex;
+  gap: 20px;
+  border: 3px solid #8db3c9;
+  padding: 0px 10px;
+  align-items: center;
+  background-color: #dcecf5;
+}
 
 @media only screen and (max-width: 700px) {
   #popup__overlay #popup__container {
@@ -389,40 +397,27 @@ body {
   align-self: flex-end;
   text-align: center;
 }
-
 #account > div #wrong__credentials__prompt {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  grid-template-columns: 3fr 1fr;
+  justify-content: space-between;
+  align-items: center;
   background-color: #fcdce0;
   border-radius: 10px;
   border: none;
   padding: 0 2rem;
 }
-
 #account > div #wrong__credentials__prompt p {
-  -ms-grid-column-align: start;
-      justify-self: start;
+  justify-self: start;
   color: #a45157;
 }
-
 #account > div #wrong__credentials__prompt span {
   color: #a45157;
-  -ms-grid-column-align: end;
-      justify-self: end;
+  justify-self: end;
 }
-
 #account > div #wrong__credentials__prompt span i {
   cursor: pointer;
 }
-
 #account > div form {
   display: grid;
   align-self: flex-start;
@@ -451,7 +446,6 @@ body {
 #account > div form .signin__container input:focus {
   outline: none;
 }
-
 #account > div form .signin__container .form__submit__btn {
   position: relative;
   height: 2.5rem;
@@ -463,11 +457,9 @@ body {
   border: none;
   cursor: pointer;
 }
-
 #account > div form .signin__container .form__submit__btn:hover {
   background-color: #5b85f8;
 }
-
 #account > div form #signup__container p {
   text-align: center;
 }
@@ -521,12 +513,8 @@ body {
   height: 90vh;
   width: 100vw;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #14aa84;
 }
 #not-found h1 {
