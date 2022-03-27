@@ -3,8 +3,6 @@ import Navigation from "../../components/navigation/navigation";
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { Link } from "react-router-dom";
-import Popup from "../../components/popup/popup";
-import popupData from "../../challenges.json";
 import { getStorageValue, useLocalStorage } from "../../utils/useLocalStorage";
 import mock_post_data, { calculateReadLength } from "../../post-data";
 import moment from "moment";
@@ -14,9 +12,6 @@ const NewStory = () => {
     const [title, setTitle] = useLocalStorage("title", "");
     const [text, setText] = useLocalStorage("text", "");
     const [posts, setPosts] = useLocalStorage("post", "");
-
-    // state variable that holds the modal open/close state
-    const [show, setShow] = useState(true);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -66,14 +61,6 @@ const NewStory = () => {
 
     return (
         <>
-            {show && (
-                <Popup
-                    challenge={popupData.newStory.challenge}
-                    text={popupData.newStory.text}
-                    onClose={() => setShow(!show)}
-                    show={show}
-                />
-            )}
             <Navigation title="Draft" submit={submitPost} />
             <div className="story__button__container__back">
                 <Link to="/feed">

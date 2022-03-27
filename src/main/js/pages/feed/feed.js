@@ -3,20 +3,9 @@ import { Link } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 import NewWriter from "../../components/newWriter/newWriter";
 import Post from "../../components/post/post";
-import popupData from "../../challenges.json";
-import Popup from "../../components/popup/popup";
-import Problem from "../../components/problem/problem";
 import { getStorageValue } from "../../utils/useLocalStorage";
 
 const Home = (props) => {
-    const problems = [
-        { name: "Navigation (Easy)" },
-        { name: "Blog Post (Hard)" },
-        { name: "Start Writing (Medium)" },
-        { name: "Responsive (Bonus)" },
-    ];
-
-    const [show, setShow] = useState(true);
     const [posts, setPosts] = useState(props.posts);
 
     // Function that triggers as soon as the page loads
@@ -31,20 +20,6 @@ const Home = (props) => {
 
     return (
         <>
-            {/* If the show state variable is set to true then display the Popup component */}
-            {show && (
-                <Popup
-                    challenge={popupData.feed.challenge}
-                    intro={popupData.feed.intro}
-                    text={popupData.feed.text}
-                    onClose={() => setShow(!show)}
-                    show={show}
-                >
-                    {problems.map((pblm) => (
-                        <Problem problem={pblm.name}></Problem>
-                    ))}
-                </Popup>
-            )}
             <Navigation title="LOGO " />
             <div id="home">
                 <div>
