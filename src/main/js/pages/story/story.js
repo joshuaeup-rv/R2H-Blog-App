@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
-import popupData from "../../challenges.json";
-import Popup from "../../components/popup/popup";
 import { getStorageValue } from "../../utils/useLocalStorage";
 import posts from "../../post-data";
 
@@ -31,9 +29,6 @@ const Story = (props) => {
     // The resulting post from id search
     const post = findPost(postData, id);
 
-    // state variable that holds the modal open/close state
-    const [show, setShow] = useState(true);
-
     // Function that triggers as soon as the page loads
     useEffect(() => {
         // Scroll to the top of the screen as the page loads
@@ -42,14 +37,6 @@ const Story = (props) => {
 
     return (
         <>
-            {show && (
-                <Popup
-                    challenge={popupData.story.challenge}
-                    text={popupData.story.text}
-                    onClose={() => setShow(!show)}
-                    show={show}
-                />
-            )}
             <Navigation />
             <div id="story">
                 <div className="story__button__container__back">

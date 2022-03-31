@@ -19,3 +19,28 @@ body {
     padding: 0;
     background-color: #f7fbfc;
 }
+
+$base-icon-color: #004aad;
+$pulse-icon-color: lighten($base-icon-color, 10%);
+
+#circle-info {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 3rem;
+    color: $base-icon-color;
+    cursor: pointer;
+    animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        color: $base-icon-color;
+    }
+    50% {
+        color: $pulse-icon-color;
+    }
+    100% {
+        color: $base-icon-color;
+    }
+}
