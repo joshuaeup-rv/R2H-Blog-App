@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# EBugMe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The EBugMe Web Application was created to grant R2H Apprentices a glimpse of what their day-to-day will look like as Software Engineers. Sometimes the codebases we work on do not start from the bottom. It's important to know how to read another engineer's code and then provide your own solution on top of theirs.
 
-## Available Scripts
+The EBugMe Web Application contains a few different challenges in the form of tickets. The apprentices will be tasked with finding the solution for each of these tickets and then pushing up their change to repair the App!
 
-In the project directory, you can run:
+## Getting Started
 
-### `npm start`
+These instructions will get you a copy of the project up and running on your local machine
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Clone the repo
+    ```sh
+    git clone https://github.com/joshuaeup-rv/r2h-blog-app.git
+    ```
+3. Install NPM packages
+    ```sh
+    npm install
+    ```
+4. Run the app
 
-### `npm test`
+    ```sh
+    npm run start
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Note: The Application's styling was applied using SASS. If you would like to update any styling you must ensure you are first running the Live Sass Compiler
 
-### `npm run build`
+    <b>This can be installed as an extension in vscode:</b>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```sh
+    https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   **Artea Wright** - _Software Engineer_ - Coding Apprenticeship Cohort 8
+-   **Frederick Evans** - _Software Engineer_ - Coding Apprenticeship Cohort 8
+-   **Joshua Proctor** - _Software Engineer_ - Coding Apprenticeship Cohort 8
