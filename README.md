@@ -10,15 +10,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installation
 
-2. Clone the repo
+1. Clone the repo
     ```sh
-    git clone https://github.com/joshuaeup-rv/r2h-blog-app.git
+    git clone <Insert Link After Fork>
     ```
-3. Install NPM packages
+2. Install NPM packages
     ```sh
     npm install
     ```
-4. Run the app
+3. Run the app
 
     ```sh
     npm run start
