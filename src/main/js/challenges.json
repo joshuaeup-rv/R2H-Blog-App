@@ -1,19 +1,7 @@
 {
-    "login": {
-        "challenge": "Login Page...",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took "
-    },
     "feed": {
         "challenge": "Feed Page...",
         "intro":"Oh no!\nThe blog is a mess!",
-        "text": "The navigation bar is out of place and there should be a total of 5 blog post.\nUse your debugging tools to ensure all blog posts display within the home page. Read the 'Helpful Deugging Tips' in the right side panel for clues."
-    },
-    "newStory": {
-        "challenge": "New Story Page...",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
-    },
-    "story": {
-        "challenge": "Story Page...",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took"
+        "text": "This site is scheduled to launch soon and we need your help fixing all of the bugs within the app. Click on the '+' to see the details of each challenge below and use your debugging tools to fix all of the bugs. Check off each challenge you complete as you go. Read the 'Helpful Deugging Tips' in the right side panel for clues."
     }
 }

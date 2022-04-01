@@ -15,11 +15,25 @@ import Popup from "./components/popup/popup";
 
 function App() {
     const [show, setShow] = useState(false);
+
+    // Challenge category and descriptions
     const problems = [
-        { name: "Navigation (Easy)" },
-        { name: "Start Writing (Medium)" },
-        { name: "Blog Post (Hard)" },
-        { name: "Responsive (Bonus)" },
+        { 
+            name: "Navigation (Easy)",
+            description: "-- Add the challenge description here --"
+        },
+        { 
+            name: "Start Writing (Medium)", 
+            description:"-- Add the challenge description here --" 
+        },
+        { 
+            name: "Blog Post (Hard)", 
+            description:"-- Add the challenge description here --"
+        },
+        { 
+            name: "Responsive (Bonus)",
+            description:"-- Add the challenge description here --" 
+        },
     ];
 
     return (
@@ -38,6 +52,7 @@ function App() {
                             key={index}
                             index={index}
                             problem={pblm.name}
+                            description={pblm.description}
                         ></Problem>
                     ))}
                 </Popup>
