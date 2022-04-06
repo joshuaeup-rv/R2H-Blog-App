@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Navigation from "../../components/navigation/navigation";
 
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";

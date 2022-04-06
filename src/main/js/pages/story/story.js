@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navigation from "../../components/navigation/navigation";
 import { getStorageValue } from "../../utils/useLocalStorage";

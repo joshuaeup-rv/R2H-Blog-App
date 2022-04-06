@@ -12,16 +12,17 @@
         display: grid;
         grid-template-rows: 15% 15% auto;
         position: absolute;
-        width: 40%;
-        height: 40%;
+        width: 50%;
+        min-height: 65%;
+        overflow-x: hidden;
+        overflow-y: scroll;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 3;
         border-radius: 30px;
-        padding: 5rem;
+        padding: 4rem;
         color: #494a4b;
-
         div {
             span {
                 cursor: pointer;
@@ -32,7 +33,6 @@
                 color: darken(#494a4b, 20%);
             }
         }
-
         h1 {
             margin: 0;
             height: fit-content;
@@ -42,13 +42,35 @@
             font-size: 1.2rem;
         }
 
-        .popup__challenges {
-            display: flex;
-            gap: 20px;
-            border: 3px solid #8db3c9;
-            padding: 0px 10px;
-            align-items: center;
-            background-color: #dcecf5;
+        .popup__challenge__container {
+            margin-bottom: 10px;
+
+
+            .popup__challenge {
+                align-items: center;
+                border: 3px solid #f4f4f4;
+                border-radius: 10px;
+                box-shadow: 2px 2px #d1cece9c;
+                display: flex;
+                gap: 20px;
+                height: 30px;
+                margin-bottom: 10px;
+                padding: 0px 10px;
+                span {
+                    display: flex;
+                    gap: 20px;
+                }
+                
+            }
+
+            .popup__challenge:hover{
+                background-color: lightblue;
+                font-weight: bolder;
+            }
+
+            .popup__challenge__description{
+                padding: 0px 20px;
+            }
         }
     }
 }
