@@ -14,7 +14,8 @@
         position: absolute;
         width: 50%;
         min-height: 65%;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -22,7 +23,6 @@
         border-radius: 30px;
         padding: 4rem;
         color: #494a4b;
-
         div {
             span {
                 cursor: pointer;
@@ -33,7 +33,6 @@
                 color: darken(#494a4b, 20%);
             }
         }
-
         h1 {
             margin: 0;
             height: fit-content;
@@ -51,13 +50,12 @@
                 align-items: center;
                 border: 3px solid #f4f4f4;
                 border-radius: 10px;
-                box-shadow: 2px 2px#d1cece9c;
+                box-shadow: 2px 2px #d1cece9c;
                 display: flex;
                 gap: 20px;
                 height: 30px;
                 margin-bottom: 10px;
                 padding: 0px 10px;
-        
                 span {
                     display: flex;
                     gap: 20px;
@@ -65,15 +63,16 @@
                 
             }
 
+            .popup__challenge:hover{
+                background-color: lightblue;
+                font-weight: bolder;
+            }
+
             .popup__challenge__description{
                 padding: 0px 20px;
             }
         }
-
-       
     }
-
-   
 }
 
 @media only screen and (max-width: 700px) {

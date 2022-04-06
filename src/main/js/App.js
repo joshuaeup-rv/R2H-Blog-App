@@ -18,21 +18,30 @@ function App() {
 
     // Challenge category and descriptions
     const problems = [
-        { 
+        {
             name: "Navigation (Easy)",
-            description: "-- Add the challenge description here --"
+            description:
+                "The navigation bar is out of place. Navigate to the _navigation.scss to put the navigation bar in the correct position.",
         },
-        { 
-            name: "Start Writing (Medium)", 
-            description:"-- Add the challenge description here --" 
+        {
+            name: "Start Writing (Medium)",
+            description:
+                "The Start Writing button isn't working and needs to be fixed. Use your tools to route the user to the New Story page",
         },
-        { 
-            name: "Blog Post (Hard)", 
-            description:"-- Add the challenge description here --"
+        {
+            name: "Blog Post (Hard)",
+            description:
+                "Posts aren't rendering as expected to the homepage. Use your tools and the debugging tips to ensure all post render to the page.",
         },
-        { 
+        {
+            name: "New Story",
+            description:
+                "The back button on the New Story page isn't routing to the correct page. Use your tools and tips to route users back to the homepage.",
+        },
+        {
             name: "Responsive (Bonus)",
-            description:"-- Add the challenge description here --" 
+            description:
+                "The homepage looks really bad on smaller screens. Add the appropriate code to make the homepage responsive for mobile phone users.",
         },
     ];
 
